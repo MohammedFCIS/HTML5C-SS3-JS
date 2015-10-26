@@ -1,5 +1,5 @@
 header {
-  background:#A0A0A0; 
+  background:#A0A0A0;
 }
 h1{
 	text-align: center;
@@ -21,4 +21,8 @@ a{
     color: #00CD4A;
     background-color: rgba(93, 0, 221, 0.4);
     text-align: center;
+}
+body{
+  padding: 3px 5px;
+  margin: 2px 5px;
 }
