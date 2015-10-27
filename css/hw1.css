@@ -3,6 +3,7 @@ header {
   background-image: url("../images/flywheel.jpg"); 
   background-size: cover;
   padding: 10px;
+  height: 300px;
 }
 h1{
 	text-align: center;
@@ -19,14 +20,16 @@ img{
 	display: block;
     background-position: center;
     width: 80%;
-    margin: 5%;
+    margin: 5% auto;
     border: 2px;
     border-color: #000000;
+    
 }
 a{
 	font-style: oblique;
 	font-family: cursive;
     color: #00CD4A;
+    background-color:(93, 0, 221);
     background-color: rgba(93, 0, 221, 0.4);
     text-align: center;
     
@@ -40,8 +43,12 @@ nav a {
     margin: 5%;
     padding: 2% 3%;
     display: inline-block;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -o-border-radius: 25px;
     border-radius: 25px;
     font-size: 20px;
+    background-color:(251,247,247);
     background-color: rgba(251,247,247,0.2);
 }
 nav a.active{
