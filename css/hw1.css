@@ -70,6 +70,7 @@ table{
     width: 70%;
     margin: auto;
     border-collapse: collapse;
+    border-spacing: 5px;
 }
 
 table th{
@@ -83,4 +84,12 @@ table th{
     background: -moz-linear-gradient(#A7C942, #A7CCCC); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#A7C942, #A7CCCC); /* Standard syntax (must be last) */
     color: #ffffff;
+   
+    
+}
+table th:first-child{   
+     border-top-left-radius: 10px; 
+}
+table th:last-child{
+    border-top-right-radius: 10px;
 }
