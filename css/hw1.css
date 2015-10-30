@@ -84,7 +84,7 @@ table th{
     background: -moz-linear-gradient(#A7C942, #A7CCCC); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#A7C942, #A7CCCC); /* Standard syntax (must be last) */
     color: #ffffff;
-   
+    border-bottom-width: thick;
     
 }
 table th:first-child{   
