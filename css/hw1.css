@@ -103,6 +103,12 @@ table tr{
 table tr:first-child{
     opacity: 1;
 }
+table tr:nth-child(odd) {
+    background: #A7C942;
+}
+table tr:nth-child(even) {
+    background: #A7CCCC;
+}
 table tr:hover{
     opacity: 1;
 }
