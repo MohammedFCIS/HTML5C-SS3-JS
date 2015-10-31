@@ -112,3 +112,10 @@ table tr:nth-child(even) {
 table tr:hover{
     opacity: 1;
 }
+
+table td:{
+    padding: 2px;
+    color:#446644;
+    border-radius: 2px;
+    text-shadow: 4px 4px #A7DDDD;
+}
