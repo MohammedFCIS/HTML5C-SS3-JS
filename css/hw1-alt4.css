@@ -1,0 +1,350 @@
+/* 
+ * Homework II
+ *
+ */
+
+/*
+ * IMPORTANT
+ *
+ * To properly grade, skip the CSS Reset section
+ * Review the "Real Homework" section further below
+ *
+ * Tested against:
+ *
+ * - Chrome:   passed
+ * - Chromium: passed
+ * - Firefox:  passed
+ * - Opera:    passed
+ *
+ * - IE:       too many issues: Microsoft moving to new Edge browser
+ *
+ */
+
+/*
+ * CSS Reset section, courtesy of Eric A. Meyer
+ *
+ * http://meyerweb.com/eric/tools/css/reset/ 
+ * v2.0 | 20110126
+ * License: none (public domain)
+ *
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+{
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+{
+	content: '';
+	content: none;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/***************************************\
+ *                                     *
+ * The "Real Homework" starts here ... *
+ *                                     *
+\***************************************/
+
+body {
+	width: 1000px;
+	padding: 0.25%;
+	margin: 0.25%;
+
+	font-size: 120%;
+	font-family: "Times New Roman", serif, Arial;
+}
+
+header {
+	height: 25vh;
+	padding: 1%;
+
+	text-align: center;
+
+	background-color: rgb(16, 64, 16);
+
+	background-image: url('../images/flywheel.jpg');
+	background-repeat: no-repeat;
+	background-origin: border-box;
+	background-position: top;
+}
+
+h1 {
+	margin: 20px 20px 50px;
+
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 260%;
+
+	color: rgb(234, 255, 234);
+}
+
+h2 {
+	padding: 1% 1%;
+
+	text-transform: uppercase;
+	font-size: 180%;
+
+	color: rgb(20, 80, 20);
+}
+
+nav a {
+	display: inline-block;
+
+	width: 14%;
+	height: 28px;
+	margin: 40px 40px 20px;
+	padding: 8px 0px 2px 0px;
+
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+
+	color: rgb(255, 255, 255);
+	background-color: rgba(200, 255, 255, 0.50);
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+
+nav a {
+	border: none;
+}
+
+nav a:hover, nav a:focus {
+	background-color: rgba(255, 255, 255, 0.70);
+}
+
+nav a:active {
+	background-color: rgba(128,  64,  64, 0.90);
+}
+
+nav a.active {
+	background-color: rgba(255,  80,  80, 0.70);
+}
+
+main {
+	height: 65vh;
+}
+
+.left {
+	display: inline-block;
+	float: left;
+
+	height: 100%;
+	width: 30%;
+	padding: 1%;
+
+	text-align: center;
+	background-color: rgb(20, 84, 20);
+}
+
+aside img {
+	width: 88%;
+	margin: 5% 4% 1% 4%;
+	border: groove 4px rgb(64, 192, 64);
+}
+
+.right {
+	display: inline-block;
+	float: left;
+
+	height: 100%;
+	width: 66%;
+	padding: 1%;
+
+	background-color: #aaddaa;
+	background: -webkit-linear-gradient(#f2fff2, #67bb67); /* For Safari 5.1 to 6.0 */
+	background: -moz-linear-gradient(#f2fff2, #67bb67); /* For Firefox 3.6 to 15 */
+	background: -o-linear-gradient(#f2fff2, #67bb67); /* For Opera 11.1 to 12.0 */
+	background: linear-gradient(#f2fff2, #67bb67); /* Standard syntax */
+}
+
+table {
+	margin: 0 auto;
+	margin-top: 32px;
+
+	text-align: center;
+
+	border-style: solid;
+	border-color: rgb(255, 255, 255);
+	border-width: 2px;
+	border-spacing: 0px;
+	border-collapse: separate;
+
+	/* We "curve" the external slightly more than the cells */
+
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+
+	font-family: "Verdana", serif, Arial;
+	font-size: 80%;
+	line-height: 80%;
+
+	background-color: rgb(255, 255, 255);
+}
+
+/* As requested,
+ * we set opacity of all rows to 0.8 and change it upon hovering
+ * note how we also set alternate row colors, within the common "green grass" theme
+ */
+
+tr:nth-child(odd) {
+	background-color: rgba(144, 240, 144, 0.8);
+}
+
+tr:nth-child(even) {
+	background-color: rgba(192, 255, 192, 0.8);
+}
+
+tr:hover {
+	background-color: rgba(240, 255, 192, 1.0);
+}
+
+tr:first-child {
+	-webkit-border-radius: 6px 6px 0px 0px;
+	-moz-border-radius: 6px 6px 0px 0px;
+	-o-border-radius: 6px 6px 0px 0px;
+	border-radius: 6px 6px 0px 0px;
+
+	text-align: left;
+}
+
+tr:first-child > th:first-child {
+	border-width: 0px 1px 1px 0px;
+
+	-webkit-border-radius: 6px 0px 0px 0px;
+	-moz-border-radius: 6px 0px 0px 0px;
+	-o-border-radius: 6px 0px 0px 0px;
+	border-radius: 6px 0px 0px 0px;
+}
+
+tr:first-child > th:last-child {
+	border-width: 0px 0px 1px 0px;
+
+	-webkit-border-radius: 0px 6px 0px 0px;
+	-moz-border-radius: 0px 6px 0px 0px;
+	-o-border-radius: 0px 6px 0px 0px;
+	border-radius: 0px 6px 0px 0px;
+}
+
+tr:last-child {
+	-webkit-border-radius: 0px  0px 6px 6px;
+	-moz-border-radius: 0px  0px 6px 6px;
+	-o-border-radius: 0px  0px 6px 6px;
+	border-radius: 0px  0px 6px 6px;
+}
+
+tr:last-child > td:first-child {
+	border-width: 0px 1px 0px 0px;
+
+	-webkit-border-radius: 0px  0px 0px 6px;
+	-moz-border-radius: 0px  0px 0px 6px;
+	-o-border-radius: 0px  0px 0px 6px;
+	border-radius: 0px  0px 0px 6px;
+}
+
+tr:last-child > td {
+	border-width: 0px 1px 0px 0px;
+}
+
+tr:last-child > td:last-child {
+	border-width: 0px 1px 0px 0px;
+
+	-webkit-border-radius: 0px  0px 6px 0px;
+	-moz-border-radius: 0px  0px 6px 0px;
+	-o-border-radius: 0px  0px 6px 0px;
+	border-radius: 0px  0px 6px 0px;
+}
+
+th {
+	padding: 8px 12px;
+
+	border-style: solid;
+	border-width: 0px 1px 1px 0px;
+	border-color: rgb(255, 255, 255);
+
+	font-weight: bold;
+
+	color: rgb(224, 255, 224);
+	background-color: rgb(64, 128, 64);
+
+	background: -webkit-linear-gradient(rgba(16, 16, 16, 0.9), rgba(64, 128, 64, 0.9)); /* For Safari 5.1 to 6.0 */
+	background: -moz-linear-gradient(rgba(16, 16, 16, 0.9), rgba(64, 128, 64, 0.9)); /* For Firefox 3.6 to 15 */
+	background: -o-linear-gradient(rgba(16, 16, 16, 0.9), rgba(64, 128, 64, 0.9)); /* For Opera 11.1 to 12.0 */
+	background: linear-gradient(rgba(16, 16, 16, 0.9), rgba(64, 128, 64, 0.9)); /* Standard syntax */
+}
+
+td {
+	padding: 8px 12px;
+
+	border-style: solid;
+	border-width: 0px 1px 1px 0px;
+	border-color: rgb(255, 255, 255);
+
+	font-size: 80%;
+}
+
+td:first-child {
+	text-align: left;
+}
+
+td:hover {
+	background-color: rgba(255, 255, 224, 1.0);
+}
+
+p {
+	padding: 0.5% 0.5%;
+}
